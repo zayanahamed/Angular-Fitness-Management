@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Search Client</h2>
+
+  <form (submit)="onSearch(); $event.preventDefault()">
+    <div class="form-group">
+      <label for="searchID">Client ID</label>
+      <input
+        type="text"
+        id="searchID"
+        class="form-control"
+        [(ngModel)]="searchID"
+        placeholder="Enter Client ID"
+        name="searchID"
+      />
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Search</button>
+      <button type="button" class="btn btn-secondary" (click)="onClear()">Clear</button>
+    </div>
+  </form>
+
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="searchResult" class="search-result">
+    <h3>Client Details</h3>
+    <p><strong>Client ID:</strong> {{ searchResult.clientID }}</p>
+    <p><strong>Name:</strong> {{ searchResult.name }}</p>
+    <p><strong>Date of Birth:</strong> {{ searchResult.DOB | date }}</p>
+    <p><strong>Gender:</strong> {{ searchResult.gender }}</p>
+    <p><strong>Fitness Program:</strong> {{ searchResult.fitnessProgram }}</p>
+    <p><strong>Contact Info:</strong> {{ searchResult.contactInfo }}</p>
+    <p><strong>Joined Date:</strong> {{ searchResult.joinedDate | date }}</p>
+    <p><strong>Ending Date:</strong> {{ searchResult.endingDate | date }}</p>
+    <p><strong>Special Health Notes:</strong> {{ searchResult.specialHealthNotes || 'N/A' }}</p>
+    <p><strong>VIP Client:</strong> {{ searchResult.isVIP ? 'Yes' : 'No' }}</p>
+  </div>
+</div>

@@ -3,14 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClientFormComponent } from './client-form/client-form.component';
+import { ClientListComponent } from './client-list/client-list.component';
+import { VipClientListComponent } from './vip-client-list/vip-client-list.component';
+import { SearchComponent } from './search/search.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClientFormComponent,
+    ClientListComponent,
+    VipClientListComponent,
+    SearchComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

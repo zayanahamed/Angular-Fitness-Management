@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Client List</h2>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Client ID</th>
+      <th>Name</th>
+      <th>Fitness Program</th>
+      <th>VIP</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.clientID }}</td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.fitnessProgram }}</td>
+      <td>{{ client.isVIP ? 'Yes' : 'No' }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="onEdit(client)">Edit</button>
+        <button class="btn btn-danger" (click)="onDelete(client.clientID)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

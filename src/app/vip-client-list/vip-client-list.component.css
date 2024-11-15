@@ -1,0 +1,26 @@
+.container {
+  margin: 20px;
+}
+
+.vip-client-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.vip-client-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f8ff;
+}
+
+.vip-client-item strong {
+  color: #333;
+}
+
+.vip-client-item span {
+  margin-left: 10px;
+  font-style: italic;
+  color: #555;
+}

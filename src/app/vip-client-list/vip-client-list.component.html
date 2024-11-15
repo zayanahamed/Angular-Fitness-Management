@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>VIP Clients</h2>
+
+  <div *ngIf="vipClients.length === 0">
+    <p>No VIP clients found.</p>
+  </div>
+
+  <ul *ngIf="vipClients.length > 0" class="vip-client-list">
+    <li *ngFor="let client of vipClients" class="vip-client-item">
+      <strong>{{ client.name }}</strong> ({{ client.clientID }})
+      <span>- Program: {{ client.fitnessProgram }}</span>
+    </li>
+  </ul>
+</div>
