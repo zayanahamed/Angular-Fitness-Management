@@ -9,6 +9,7 @@ import { VipClientListComponent } from './vip-client-list/vip-client-list.compon
 import { SearchComponent } from './search/search.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ClientListComponent,
     VipClientListComponent,
     SearchComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
